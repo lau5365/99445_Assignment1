@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">My Portfolio</div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#about" class="nav-item">About Me</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+
+            <button class="hamburger" id="hamburger" aria-label="Open Menu">☰</button>
+        </nav>
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+    <section id="home" class="section home-section">
+        <div class="home-content">
+            <h1>Hello, I'm <span class="accent">Jason Ong</span></h1>
+            <p>A developer who is involved and launching some computational projects.</p>
+            <button id="scrollProjects" class="btn-primary">View My Projects</button>
+        </div>
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section projects-section">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project-card fade-in">
+                <img src="img/project1.png" alt="Project Screenshot 1">
+                <h3>Student Gradebook</h3>
+                <p>For tracking student grades and courses, aiding educators and students in academic management.</p>
+                <a href="files/CCN 2024.docx" class="project-link">View More</a>
+            </div>
+
+            <div class="project-card fade-in">
+                <img src="img/project2.png" alt="Project Screenshot 2">
+                <h3>Kiosk Management System</h3>
+                <p>A system to manage food kiosk of FCSIT and food supplier.</p>
+                <a href="files/Kiosk.pptx" class="project-link">View More</a>
+            </div>
+
+            <div class="project-card fade-in">
+                <img src="img/project3.png" alt="Project Screenshot 3">
+                <h3>ART Application Design</h3>
+                <p>Design Autonomous Rapid Transit (ART) application and improve user experiences while using ART application.</p>
+                <a href="https://www.figma.com/proto/lXI3vsciZScVgItzcEt05M/Project-SHOPEE_JLL-UIUX?node-id=519-1119&starting-point-node-id=519%3A1119" class="project-link">View More</a>
+            </div>
+
+            <div class="project-card fade-in coming-soon">
+                <div class="coming-soon-message">
+                    <h3>More Project Coming Soon</h3>
+                    <p>Stay tuned for this exciting new project!</p>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section about-section">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+            <img src="img/me.jpg" alt="Photo of me" class="profile-img">
+            <div>
+                <p>
+                    I'm a passionate developer who loves creating efficient, elegant, and user-friendly digital experiences.
+                    I know some programming language include HTML, CSS, JavaScript, C, C++, Python, Java and Kotlin. 
+                    I also did know about UI/UX design to enhance user experiences.
+                </p>
+                <p> I enjoy solving challenges, exploring new technologies, and building meaningful projects.
+                    I do photo and video editing using Lightroom and Premiere Pro when I was free. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section contact-section">
+        <h2 class="section-title">Contact Me</h2>
+
+        <form class="contact-form" id="contactForm">
+            <label>
+                Name
+                <input type="text" id="name" required>
+            </label>
+
+            <label>
+                Email
+                <input type="email" id="email" required>
+            </label>
+
+            <label>
+                Message
+                <textarea id="message" rows="5" required></textarea>
+            </label>
+
+            <button type="submit" class="btn-primary">Send</button>
+            <p id="formStatus"></p>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Jason Ong. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

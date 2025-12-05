@@ -1,0 +1,230 @@
+/* ================= THEME VARIABLES ================= */
+
+:root {
+    --bg: #f8f8f8;
+    --text: #222;
+    --card-bg: white;
+    --accent: #00aaff;
+    --nav-bg: #0066ff;
+    --nav-text: white;
+}
+
+body.dark {
+    --bg: #101820;
+    --text: #e8e8e8;
+    --card-bg: #1a1f24;
+    --accent: #4cc9ff;
+    --nav-bg: #000;
+    --nav-text: #e8e8e8;
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+.section {
+    padding: 70px 10%;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--nav-text);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--accent);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    color: var(--nav-text);
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    margin-left: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--nav-text);
+    transition: color 0.3s;
+}
+.theme-toggle:hover {
+    color: var(--accent);
+}
+
+/* ================= HOME ================= */
+
+.home-section {
+    background: linear-gradient(to right, #101820, #28313b);
+    color: white;
+    text-align: center;
+    padding: 150px 10%;
+}
+
+.btn-primary {
+    padding: 12px 20px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    opacity: 0.8;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project-card.coming-soon {
+    background-color: #f0f0f0; 
+    border: 2px dashed #ccc; 
+    text-align: center;
+    padding: 30px;
+    color: #777; 
+}
+
+.project-card.coming-soon .coming-soon-message {
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+.project-card.coming-soon h3 {
+    font-size: 1.6rem;
+    color: #333; 
+    margin-bottom: 10px;
+}
+
+.project-card.coming-soon p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #888;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.profile-img {
+    width: 15%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio of the image */
+    object-fit: cover; /* Ensures the image fits well without stretching */
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================= ANIMATIONS ================= */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--nav-bg);
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        padding: 20px;
+        border-radius: 6px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
