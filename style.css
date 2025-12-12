@@ -227,5 +227,10 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
+    .profile-img {
+        width: 30%;
+        max-width: 300px;
 }
+
 
