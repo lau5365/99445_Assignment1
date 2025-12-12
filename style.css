@@ -166,7 +166,7 @@ body {
 }
 
 .profile-img {
-    width: 15%; /* Makes the image responsive */
+    width: 40%; /* Makes the image responsive */
     height: auto; /* Maintains the aspect ratio of the image */
     object-fit: cover; /* Ensures the image fits well without stretching */
 }
@@ -228,3 +228,4 @@ body {
         text-align: center;
     }
 }
+
